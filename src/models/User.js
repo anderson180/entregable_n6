@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection');
+const bcryt = require('bcryt');
 
 const User = sequelize.define('modelName', {
     fisrtName: {
@@ -14,7 +15,8 @@ const User = sequelize.define('modelName', {
 
     email: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
     },
 
     password: {
@@ -27,5 +29,11 @@ const User = sequelize.define('modelName', {
         allowNull: false
     },
 });
+
+User.beforeCreate(async ( user ) =>{
+    const password = user.password
+    const hashPassword = await bcryt.hash(password, 10)
+    user.password = hashPassword
+})
 
 module.exports = User;
