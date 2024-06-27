@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection');
 const bcryt = require('bcryt');
 
-const User = sequelize.define('modelName', {
+const User = sequelize.define('user', {
     fisrtName: {
         type: DataTypes.STRING,
         allowNull: false
