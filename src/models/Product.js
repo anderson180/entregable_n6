@@ -16,6 +16,8 @@ const Product = sequelize.define('product', {
         type: DataTypes.STRING,
         allowNull: false
     },
+
+    //aqui deberia ir categoryid
 });
 
 

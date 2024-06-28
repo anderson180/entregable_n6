@@ -1,11 +1,12 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection');
 
-const Category = sequelize.define('category', {
-    name: {
-        type: DataTypes.STRING,
+const Cart = sequelize.define('cart', {
+    quantity: {
+        type: DataTypes.INTEGER,
         allowNull: false
     },
+
 });
 
-module.exports = Category;
+module.exports = Cart;
