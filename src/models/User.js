@@ -28,6 +28,14 @@ const User = sequelize.define('user', {
         type: DataTypes.STRING,
         allowNull: false
     },
+
+    // solo por los que puede ser seteado
+
+    //role: {
+    //type: DataTypes.ENUM({
+    //   values: ['user', 'admin'],
+    //})
+    //}
 });
 
 User.beforeCreate(async ( user ) =>{
