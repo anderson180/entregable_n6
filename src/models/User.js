@@ -38,6 +38,7 @@ const User = sequelize.define('user', {
     //}
 });
 
+// Antes de regristrarlo en la base de tados se le asigna la cotraseña incriptada
 User.beforeCreate(async ( user ) =>{
     const password = user.password
     const hashPassword = await bcryt.hash(password, 10)

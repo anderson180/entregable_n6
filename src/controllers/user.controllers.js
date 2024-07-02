@@ -21,8 +21,8 @@ const remove = catchError(async(req, res) => {
 
 const update = catchError(async (req, res) => {
 
-    const fieldsRemove = ['password', 'email'];
-    fieldsRemove.forEach((field) => delete req.body[field]);
+    const doNotUpdate = ['password', 'email'];
+    doNotUpdate.forEach((field) => delete req.body[field]);
   
     const { id } = req.params;
   
