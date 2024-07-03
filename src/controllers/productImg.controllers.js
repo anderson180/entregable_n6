@@ -1,6 +1,6 @@
 const catchError = require('../utils/catchError');
 const ProductImg = require('../models/ProductImg');
-const path = requie('path');
+const path = require('path');
 const fs = require('fs')
 
 const getAll = catchError(async(req, res) => {

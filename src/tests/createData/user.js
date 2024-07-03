@@ -3,10 +3,10 @@ const User = require("../../models/User")
 const user = async () => {
   const body = {
     firstName: "Anderson",
-    lastName: "Javier",
-    email: "javieracibe@gmail.com",
-    password: "1234",
-    phone: "5620860800"
+    lastName: "soto",
+    email: "javier@email.com",
+    password: "7124",
+    phone: "0000"
   }
 
   await User.create(body)
