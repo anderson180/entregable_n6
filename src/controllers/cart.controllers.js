@@ -11,6 +11,7 @@ const getAll = catchError(async (req, res) => {
         include: [
             {
                 model: Product,
+                //excluir para el fronen los staytans
                 attributes: { exclude: ["createdAt", "updatedAt"] },
                 include: [
                     {
